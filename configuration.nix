@@ -17,8 +17,7 @@
   time.timeZone = "Oman/Muscat";
 
   programs.hyprland = {
-    enable = true;
-    withUWSM = true;
+    enable = true;:
     xwayland.enable = true;
   };
 
@@ -56,6 +55,8 @@
     fzf
     deno
     python314
+    libvirt
+    qemu_kvm
   ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
