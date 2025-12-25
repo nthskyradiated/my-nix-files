@@ -3,14 +3,17 @@
 {
   home.username = "andy";
   home.homeDirectory = "/home/andy";
-  home.stateVersion = "25.11";
+  home.stateVersion = "25.05";
   programs.git.enable = true;
   programs.bash = {
     enable = true;
     shellAliases = {
-      cat = "bat";
-      ls = "eza -l --icons";
-      k = "kubectl ";
+      btw = "echo i use nixos, btw";
     };
+    profileExtra = ''
+      if [ -z "$WAYLAND_DISPLAY" ] && [ "$XDG_VTNR" = 1 ]; then
+        exec hyprland
+      fi
+    '';
   };
 }
