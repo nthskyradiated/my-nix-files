@@ -17,7 +17,7 @@
   time.timeZone = "Oman/Muscat";
 
   programs.hyprland = {
-    enable = true;:
+    enable = true;
     xwayland.enable = true;
   };
 
