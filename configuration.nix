@@ -58,10 +58,14 @@
     libvirt
     qemu_kvm
     wofi
+    btop
+    docker
   ];
 
   fonts.packages = with pkgs; [
   jetbrains-mono
+  nerd-fonts.fira-code
+  nerd-fonts.caskaydia-mono
   ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
