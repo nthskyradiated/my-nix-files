@@ -8,13 +8,15 @@
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-services.getty.autologinUser = "andy";
+  services.getty.autologinUser = "andy";
 
   networking.hostName = "nixos";
   networking.networkmanager.enable = true;
 
   time.timeZone = "Oman/Muscat";
-
+  
+  wayland.windowManager.hyprland.systemd.enable = false;
+  
   programs.hyprland = {
     enable = true;
     xwayland.enable = true;
