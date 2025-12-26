@@ -18,6 +18,7 @@ services.getty.autologinUser = "andy";
   programs.hyprland = {
     enable = true;
     xwayland.enable = true;
+    withUWSM = true;
   };
 
   users.users.andy = {
@@ -56,6 +57,11 @@ services.getty.autologinUser = "andy";
     python314
     libvirt
     qemu_kvm
+    wofi
+  ];
+
+  fonts.packages = with pkgs; [
+  jetbrains-mono
   ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
