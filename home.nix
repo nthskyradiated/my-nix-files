@@ -5,6 +5,12 @@
   home.homeDirectory = "/home/andy";
   home.stateVersion = "25.11";
   programs.git.enable = true;
+  
+  wayland.windowManager.hyprland = {
+  enable = true;
+  systemd.enable = false;  # Disable since uwsm handles this
+    };
+  
   programs.bash = {
     enable = true;
     shellAliases = {
@@ -13,8 +19,8 @@
       k= "kubectl ";
     };
     profileExtra = ''
-      if [ -z "$WAYLAND_DISPLAY" ] && [ "$XDG_VTNR" = 1 ]; then
-      exec uwsm start -S hyprland-uwsm.desktop
+      if [ -z "$WAYLAND_DISPLAY" ] && [ "$(tty)" = "/dev/tty1" ]; then
+      exec uwsm start hyprland-uwsm.desktop
       fi
     '';
   };

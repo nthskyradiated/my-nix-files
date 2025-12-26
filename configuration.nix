@@ -15,8 +15,6 @@
 
   time.timeZone = "Oman/Muscat";
   
-  wayland.windowManager.hyprland.systemd.enable = false;
-  
   programs.hyprland = {
     enable = true;
     xwayland.enable = true;
