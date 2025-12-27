@@ -13,7 +13,7 @@
   networking.hostName = "nixos";
   networking.networkmanager.enable = true;
 
-  time.timeZone = "Oman/Muscat";
+  time.timeZone = "Asia/Dubai";
   
   programs.hyprland = {
     enable = true;
